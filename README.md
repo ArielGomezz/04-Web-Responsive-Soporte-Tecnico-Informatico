@@ -1,2 +1,2 @@
-# 04-Web-Responsive-Soporte-Tecnico-Informatico
-Web responsive con HTML y CSS
+Web Responsive
+Web responsive de Soporte Técnico Informático con HTML y CSS
