@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Oswald:wght@200&family=PT+Sans&family=PT+Sans+Narrow&family=Roboto+Condensed:wght@300&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Oswald:wght@200&family=PT+Sans&family=PT+Sans+Narrow&family=Roboto+Condensed:wght@300&family=Ubuntu+Condensed&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;}
+
+/* --------------- HEADER ------------------------*/
+
+header{
+    height: 90px; /*EL ALTO DEL HEADER*/
+    padding: 0 50px; /* 0 ESPACIO ARRIBA Y 50 A LOS COSTADOS*/
+    display: flex; /* TITULO Y BARRA HORIZONTAL*/
+    justify-content: space-between; /*ESPACIO ENTRE TITULO Y BARRA*/
+    align-items: center;  
+}
+
+.primero{
+    display: flex;
+    color:black;
+    align-items: center;
+}
+
+.rotate{
+    animation: spin 1s linear;
+}
+
+.primero h2 {
+    margin-left: 10px;
+    font-family:'PT Sans Narrow', sans-serif;
+}
+
+.primero img{
+    width: 35px;
+    height: 35px;
+}
+
+.menu a{
+    color:black;
+    font-family: 'Ubuntu Condensed', sans-serif ;
+    padding: 0 18px;
+    font-size: 16.5px;
+    transition: 0,5s;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer; 
+    display: none; /*SOLO TIENE QUE VERSE ES EL RESPONSIVE*/
+    transition: 0, 8s;
+}
+
+.mostrar-menu{
+    order: 1; /*CUANDO SE VEA RESPONSIVE QUE SE VEA PRIMERO EL INICIO, LUEGO EMPRESA, SERVICIOS Y CONTACTOS*/
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color:cornflowerblue;
+}
+
+#check{
+    display: none; /*APARECE SOLO CUANDO ES RESPONSIVE*/
+}
+
+/*----------------- FINAL DEL HEADER ----------------------*/
+
+
+/*------------------INICIO SECTION BANNER--------------------*/
+
+#banner{
+    background-image: url(img/Imagen\ Principal.jpg);
+    height: 85vh; /*LO GRANDE QUE ES LA IMAGEN*/
+    background-size: cover; /*LA IMAGEN SE VE MEJOR UBICADA*/
+}
+
+.contenido-banner{
+    padding: 0 50px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    color: white;
+    flex-direction:column; /*TITULO PRIMERO Y ABAJO ENLACE DE WHATSAPP*/
+    justify-content:center; /*CENTRADO TITULO Y ENLACE*/
+}
+
+.contenido-banner h3{
+    font-family:'UbuntU Condensed', sans-serif;
+    font-size: 37px;
+    padding: 10px 0;
+}
+
+.boton-empezar{
+    font-size: 17px;
+    border: 1px solid #00bb2d;
+    padding: 10px 20px;
+    align-self: baseline; /*COMO USAMOS FLEX LO TRATA COMO BLOQUE*/
+    background: #00bb2d;
+    color: white;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.boton-empezar:hover{
+    background:#000;
+    border: #000;
+}
+
+/*----------------FINAL SECTION BANNER--------------------*/
+
+/*-----------------EMPRESA------------------------*/
+
+#informacion {
+    padding: 50px 50px; /*ESPACIOS ARRIBA Y A LOS COSTADOS*/
+    display: flex; /*UNO AL LADO DEL OTRO, HORIZONTAL*/
+    justify-content: center; /*AMBOS DIV SE CENTRAN*/
+    text-align: center; /*TEXTOS CENTRADOS*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+#informacion div {
+    padding: 30px 10px; /*AMBOS DIV ESPACIOS ARRIBA Y COSTADOS*/
+}
+
+#informacion div h4 {
+    color: #000;
+    font-size: 30px;
+    margin: 0px 0px; /*ESPACIOS ALRREDEDOR DEL H4*/
+    margin-bottom: 45px;
+}
+
+#informacion div p {
+    color: #000;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif ;
+    margin-bottom: 10px;
+}
+
+#informacion img{
+    padding: 30px  15px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+/*------------------EMPRESA------------------------*/
+
+
+/*----------------INICIO SENTION SERVICIOS----------*/
+
+.service {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    line-height: 1.5;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    background: #e2e2e2;
+    padding: 4rem;
+   
+}
+
+.service .heading {
+    
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+
+.service .box-container{
+    display: flex; /*PONE LOS SERVICIOS HORIZONTAL, UNO AL LADO DEL OTRO*/
+    flex-wrap: wrap; /*PONE TRES SECCIONES DE UN LADO Y TRES DEL OTRO*/
+    gap: 1.5rem ;
+}
+
+.service .box-container .box:hover{
+    color: steelblue;
+}
+
+.service .box-container .box{
+    flex: 1 1 10rem;
+    text-align: center;
+    padding: 4rem; /*ESPACIOS ENTRE CADA SERVICIO*/
+    background: #fff;
+    border-radius: .5rem; /*BORDE REDONDEADO*/
+    box-shadow:  0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.service .box-container .box i{
+    height: 3rem;
+    font-size: 180%;
+}
+
+
+/*------------------FINAL SECTION SERVICIOS----------------------*/
+
+
+/*--------------------SETION ICONOS-------------------------------*/
+
+#iconos {
+    padding: 0 50px; /*ESPACIOS CERO ARRIBA 50PX A LOS COSTADOS*/
+    /*background: rgb(77, 77, 92, 0.6);*/   
+}
+
+.contenido-iconos {
+    padding: 50px 50px 0 50px;
+    display: flex; /*HORIZONTALES*/
+    justify-content: space-between; /*ESPACIO ENTRE LOS ICONOS*/
+    text-align: center;
+}
+
+.contenido-iconos div {
+    flex: 1; /*PARA QUE CADA DIV OCUPE LO MISMO*/
+    margin: 20px 0px; /*MARGEN ENTRE LOS DIV*/
+    border-right: 2px solid  #4d4d5c; /*LINEA A LOS COSTADOS*/
+    /*rgb(255, 255, 255, 0.2); /*LINEA A LOS COSTADOS*/*/
+}
+
+#icono-email {
+    border: none; /*PARA QUE EL ULTIMO NO TENGO LINEA A LOS COSTADOS*/
+    /*ENTONCES CONTENIDO-ICONO Y CONTENIDO-ICONOS DIV LO DEJAMOS COMO SELECTOR DE CLASE*/
+    /*Y #ICONO-EMAIL LO PONEMOS COMO SELECTOR ID Y TIENE MEYOR PREFERENCIA*/
+}
+
+.contenido-iconos div h4 {
+    color: #000;
+    font-size: 20px;
+    margin: 10px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contenido-iconos div p {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contenido-iconos img {
+    width: 60px;
+}
+
+.contenido-iconos img:hover{
+    width: 70px;
+}
+    
+
+/*---------------------FINAL SECTION ICONOS-----------------------------*/
+
+/*--------------------SECTION FORMULARIO-------------------------------*/
+
+#formulario-contacto {
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    padding: 50px 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+#formulario-contacto h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px; /*ESPACIO DE LA PARTE DE ABAJO*/
+}
+
+#formulario-contacto form {
+    max-width: 80%;
+    margin: 0 auto; /*USAMOS MAX WIDTH Y LUEGO MARGIN 0 AUTO Y LO UBICA*/
+}
+
+.datos-form {
+    display: flex; /*EL NOMBRE Y EMAIL HORIZONTALES*/
+}
+
+.datos-form div {
+    padding: 10px; /*ESPACIOS ESTRE LOS DIV DEL NOMBRE, EMAIL Y MENSAJE*/
+    flex: 1; /*PARA QUE OCUPE LO MISMO CADA UNO*/
+}
+
+form label {   /*UNO ARRIBA DEL OTRO*/
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    border: 2px solid #000;
+    padding: 10px 5px;
+    outline: 0; /*BORDE AZUL CUANDO NOS SITUAMOS PARA ESCRIBIR DENTRO*/
+    color: black; /*COLO DEL TEXTO CUANDO ESCRIBIMOS*/
+    width: 100%; /*PARA QUE OCUPE EL 100% DENTRO DEL MAX-WIDTH DEL 80% */
+}
+
+.mensaje { /*SE ACOMODO LAS DIMENSIONES QUE TENIA EL NOMBRE, ESTABA UN POCO DESALINEADO*/
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+button{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    display: block;
+    border: 1px solid #000;
+    columns: #000;
+    text-align: center;
+    padding: 10px 10px;
+    margin-left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+button:hover{
+    background: #4d4d5c;
+    color: #fff;
+}
+
+/*-----------------------SECTION FORMULARIO-----------------------------*/
+
+
+/*------------------------------FOOTER-----------------------------------*/
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+
+}
+
+.footer{
+    background-color: #24262b;
+    padding: 50px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    color: #bbbbbb;
+    display: block;
+}
+
+.footer-col ul li a:hover{
+    color:#e91e63;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+
+/*RESPONSIVE*/
+
+@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+ 
+/*PODEMOS SACAR ESTE Y IGUAL QUEDA BIEN*/
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/*------------------------------FOOTER-----------------------------------*/
+
+/* ROTACION DEL LOGOTIPO*/
+
+@-webkit-keyframes spin{
+    100%{transform:rotate(500deg)}
+}
+
+/* FINAL ROTACION LOGOTIPO*/
+
+
+/*----------------RESPONSIVE HEADER-----------------------*/
+
+@media(max-width:768px){
+    /* INICIO RESPONSIVE HEADER */
+    .mostrar-menu,
+    .esconder-menu{
+        display: block; /*APARECEN EL LOGO HAMBURGESA Y LA X*/
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh; /*ALTURA*/
+        background: #242c4c;
+        right: -100%;
+        top: 0; /*OCUPADO TODO, NO DEJA ESPACIOS A LOS COSTADOS CUANDO ES RESPONSIVE*/
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100; /*PARA QUE NO SE PISE CON OTROS ELEMENTOS*/
+        transition: 0, 10s;
+        color: #fff;
+    }
+
+    .menu a{ /*APARECE UNO ARRIBA DEL OTRO CUANDO ESTA RESPONSIVO*/
+        display: block;
+        padding: 20px;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 130px; /*40px ORIGINAL*/
+    }
+    
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    /* FINAL RESPONSIVE HEADER*/
+
+
+    
+    /* SECTION INFORMACION*/
+    #informacion {
+        flex-direction: column;
+    }
+    /* FINAL SECTION INFORMACION*/
+
+
+    /* SECTION ICONOS*/
+    .contenido-iconos {
+        flex-direction: column;
+    }
+
+    .contenido-iconos div {
+        border: none; /*SACA LOS BORDES A LOS COSTADOS*/
+    }
+    /* SECTION ICONOS*/
+
+
+    /* SECTION FORMULARIO */
+    .datos-form {
+        flex-direction: column;
+    }
+    /* SECTION FORMULARIO*/
+}
+
+
+
+@media(max-width:860px){
+    .primero img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .primero h2{
+        font-size: 18px;
+    }
+
+    .menu a {
+        font-size: 17px;
+    }
+
+}
+
+
+@media(max-width:600px){
+    #banner{
+        width: 100%;
+        
+    }
+
+    #banner h3{
+        font-size: 25px;
+    }
+
+    #banner a{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .empresa{
+        height: 60vh;
+        font-size: 15px;
+    }
+
+}
+
